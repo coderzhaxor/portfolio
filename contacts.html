@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts | Alif Januantara</title>
+
+    <link rel="stylesheet" href="css/contacts.css">
+    <!-- icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+</head>
+<body class="bg-[#18181B] w-full min-h-screen text-white px-4 pb-20">
+    <!-- Navbar start -->
+    <nav class="flex items-center py-8 mt-4 px-6 md:px-10 lg:px-24 justify-between relative">
+        <div class="profile w-12 h-12">
+          <img src="assets/img/profile.png" class="w-full h-full" alt="Alif Januantara">
+        </div>
+        <button class="menu-button flex md:hidden text-white text-2xl" id="menu-button">
+          <i class="bi bi-list"></i>
+        </button>
+        <div class="menu mx-auto hidden md:flex flex-col md:flex-row items-center md:space-x-6 space-y-2 md:space-y-0 absolute md:relative top-full left-0 right-0 bg-[#212121] md:bg-transparent p-4 md:p-0 max-md:rounded-lg" id="menu">
+          <a href="index.html" class="px-4 py-2 hover:bg-white/5 rounded-md text-lg w-full md:w-auto text-center">About</a>  
+          <a href="certificate.html" class="px-4 py-2 hover:bg-white/10 rounded-md text-white/70 text-lg w-full md:w-auto text-center">Certificate</a>
+          <a href="projects.html" class="px-4 py-2 hover:bg-white/10 rounded-md text-white/70 text-lg w-full md:w-auto text-center">Projects</a>
+          <a href="blogs.html" class="px-4 py-2 hover:bg-white/10 rounded-md text-white/70 text-lg w-full md:w-auto text-center">Blogs</a>
+          <a href="contacts.html" class="px-4 py-2 bg-white/10 rounded-md text-white/70 text-lg w-full md:w-auto text-center max-md:bg-indigo-600">Reach Me!</a>
+        </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- Section Contact Start -->
+    <main class="mt-4">
+        <article class="max-w-4xl mx-auto">
+            <h1 class="md:text-center text-white/70 font-semibold text-2xl md:text-3xl leading-relaxed mt-4">Reach Me</h1>
+            <form action="" class="w-full mt-16">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <label for="nama" class="text-white/70">
+                        Fullname <span class="text-red-500">*</span>
+                        <input type="text" id="nama" placeholder="Your Name" class="block h-16 w-full bg-white/10 px-6 mt-4 rounded active:bg-white/10 outline-none focus:ring-2 focus:ring-blues-dark" required>
+                    </label>
+                    <label for="nama" class="mt-auto text-white/70">
+                        Email <span class="text-red-500">*</span>
+                        <input type="text" id="nama" placeholder="Your Email" class="block h-16 w-full bg-white/10 px-6 mt-4 rounded active:bg-white/10 outline-none focus:ring-2 focus:ring-blues-dark" required>
+                    </label>
+                    <label for="msg" class="col-span-2 text-white/70">
+                        Messages
+                        <textarea name="msg" id="msg" class="w-full mt-4 bg-white/10 rounded active:bg-white/10 outline-none focus:ring-2 focus:ring-blues-dark p-4 resize-none" rows="10" placeholder="Enter messages here" required></textarea>
+                    </label>
+                    <button type="submit" class="py-3 w-1/2 rounded-md le bg-blues-dark hover:bg-blues-dark/80 block col-end-3 ml-auto">SEND</button>
+                </div>
+            </form>
+        </article>
+    </main>
+    <!-- Section Contact End -->
+
+    <script>
+        const menuButton = document.getElementById('menu-button');
+        const menu = document.getElementById('menu');
+
+        menuButton.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+        });
+    </script>
+</body>
+</html>
